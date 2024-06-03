@@ -1,12 +1,6 @@
 <?php
 
-session_start();
-if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
-    exit;
-}
-
-include '../includes/db.php'; ?>
+include '../includes/db.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
@@ -17,11 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "INSERT INTO patients (name, age, gender, address, phone) VALUES ('$name', $age, '$gender', '$address', '$phone')";
     if ($conn->query($sql) === TRUE) {
-        header('Location: index.php');
+        header('Location: ../views/daftar_pasien.php');
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 
 $conn->close();
+
 ?>

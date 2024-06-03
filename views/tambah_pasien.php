@@ -1,10 +1,5 @@
 <?php 
 
-session_start();
-if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
-    exit;
-}
 
 include '../includes/db.php'; ?>
 <!DOCTYPE html>
@@ -16,7 +11,7 @@ include '../includes/db.php'; ?>
 <body>
 <div class="container">
     <h2>Tambah Pasien Baru</h2>
-    <form action="simpan_pasien.php" method="post">
+    <form action="../modules/simpan_pasien.php" method="post">
         <div class="form-group">
             <label for="name">Nama:</label>
             <input type="text" class="form-control" id="name" name="name" required>

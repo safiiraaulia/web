@@ -1,12 +1,6 @@
 <?php
 
-session_start();
-if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
-    exit;
-}
-
-include '../includes/db.php'; ?>
+include '../includes/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'];
@@ -18,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "UPDATE patients SET name='$name', age=$age, gender='$gender', address='$address', phone='$phone' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header('Location: index.php');
+        header('Location: ../views/daftar_pasien.php');
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

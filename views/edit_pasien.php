@@ -1,12 +1,7 @@
 <?php
 
-session_start();
-if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
-    exit;
-}
 
-include '../includes/db.php'; ?>
+include '../includes/db.php';
 
 $id = $_GET['id'];
 $sql = "SELECT * FROM patients WHERE id=$id";
@@ -30,7 +25,7 @@ $conn->close();
 <body>
 <div class="container">
     <h2>Edit Pasien</h2>
-    <form action="update_pasien.php" method="post">
+    <form action="../modules/update_pasien.php" method="post">
         <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
         <div class="form-group">
             <label for="name">Nama:</label>

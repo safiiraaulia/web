@@ -1,11 +1,4 @@
 <?php 
-
-session_start();
-if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
-    exit;
-}
-
 include '../includes/db.php'; ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +9,7 @@ include '../includes/db.php'; ?>
 <body>
 <div class="container">
     <h2>Tambah Janji Temu Baru</h2>
-    <form action="simpan_janjitemu.php" method="post">
+    <form action="../modules/simpan_janjitemu.php" method="post">
         <div class="form-group">
             <label for="patient_id">Pasien:</label>
             <select class="form-control" id="patient_id" name="patient_id">
@@ -46,8 +39,8 @@ include '../includes/db.php'; ?>
             </select>
         </div>
         <div class="form-group">
-            <label for="appointment_date">Tanggal Janji Temu:</label>
-            <input type="datetime-local" class="form-control" id="appointment_date" name="appointment_date" required>
+            <label for="appointment_datetime">Tanggal dan Jam Janji Temu:</label>
+            <input type="datetime-local" class="form-control" id="appointment_datetime" name="appointment_datetime" required>
         </div>
         <div class="form-group">
             <label for="reason">Alasan:</label>
@@ -56,5 +49,20 @@ include '../includes/db.php'; ?>
         <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const appointmentDateTimeInput = document.getElementById('appointment_datetime');
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    const hours = String(today.getHours()).padStart(2, '0');
+    const minutes = String(today.getMinutes()).padStart(2, '0');
+    const minDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+
+    appointmentDateTimeInput.min = minDateTime;
+});
+</script>
 </body>
 </html>
