@@ -6,7 +6,7 @@ if (!isset($_SESSION['username'])) {
     exit;
 }
 
-include 'includes/db.php';
+include '../includes/db.php'; ?>
 
 $id = $_GET['id'];
 $sql = "DELETE FROM appointments WHERE id=$id";
