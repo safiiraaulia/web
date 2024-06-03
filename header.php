@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="../modules/logout.php">Logout</a>
+                <a class="nav-link" href="modules/logout.php">Logout</a>
             </li>
         </ul>
     </div>
@@ -19,6 +19,6 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
-            <?php include 'sidebar.php'; ?>
+            <?php include 'includes/sidebar.php'; ?>
         </div>
         <div class="col-md-9">
