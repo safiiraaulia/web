@@ -13,7 +13,6 @@ if ($result->num_rows > 0) {
     exit;
 }
 
-$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -26,21 +25,50 @@ $conn->close();
 <div class="container">
     <h2>Edit Janji Temu</h2>
     <form action="../modules/update_janjitemu.php" method="post">
-        <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+        <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>">
         <div class="form-group">
-            <label for="patient_name">Nama Pasien:</label>
-            <input type="text" class="form-control" id="patient_name" name="patient_name" value="<?php echo $row['patient_name']; ?>" required>
+            <label for="patient_id">Pasien:</label>
+            <select class="form-control" id="patient_id" name="patient_id">
+                <?php
+                $sql = "SELECT id, name FROM patients";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while($patient = $result->fetch_assoc()) {
+                        $selected = ($patient['id'] == $row['patient_id']) ? 'selected' : '';
+                        echo "<option value='{$patient['id']}' $selected>{$patient['name']}</option>";
+                    }
+                }
+                ?>
+            </select>
         </div>
         <div class="form-group">
-            <label for="doctor_name">Nama Dokter:</label>
-            <input type="text" class="form-control" id="doctor_name" name="doctor_name" value="<?php echo $row['doctor_name']; ?>" required>
+            <label for="doctor_id">Dokter:</label>
+            <select class="form-control" id="doctor_id" name="doctor_id">
+                <?php
+                $sql = "SELECT id, name FROM doctors";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while($doctor = $result->fetch_assoc()) {
+                        $selected = ($doctor['id'] == $row['doctor_id']) ? 'selected' : '';
+                        echo "<option value='{$doctor['id']}' $selected>{$doctor['name']}</option>";
+                    }
+                }
+                ?>
+            </select>
         </div>
         <div class="form-group">
             <label for="appointment_date">Tanggal Janji Temu:</label>
-            <input type="date" class="form-control" id="appointment_date" name="appointment_date" value="<?php echo $row['appointment_date']; ?>" required>
+            <input type="datetime-local" class="form-control" id="appointment_date" name="appointment_date" value="<?php echo htmlspecialchars(date('Y-m-d\TH:i', strtotime($row['appointment_date']))); ?>" required>
         </div>
-        <button type="submit" class="btn btn-primary">Update Janji Temu</button>
+        <div class="form-group">
+            <label for="reason">Alasan:</label>
+            <textarea class="form-control" id="reason" name="reason"><?php echo htmlspecialchars($row['reason']); ?></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
 </body>
 </html>
+<?php
+$conn->close();
+?>

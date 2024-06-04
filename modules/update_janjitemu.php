@@ -1,5 +1,4 @@
 <?php
-
 include '../includes/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -9,9 +8,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $appointment_date = $_POST['appointment_date'];
     $reason = $_POST['reason'];
 
-    $sql = "UPDATE appointments SET patient_id=$patient_id, doctor_id=$doctor_id, appointment_date='$appointment_date', reason='$reason' WHERE id=$id";
+    $sql = "UPDATE appointments SET patient_id='$patient_id', doctor_id='$doctor_id', appointment_date='$appointment_date', reason='$reason' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header('Location: daftar_janjitemu.php');
+        header('Location: ../views/daftar_janjitemu.php');
+        exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

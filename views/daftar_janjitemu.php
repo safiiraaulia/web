@@ -1,6 +1,8 @@
 <?php 
 
-include '../includes/db.php'; ?>
+include '../includes/db.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +12,7 @@ include '../includes/db.php'; ?>
 <body>
 <div class="container">
     <h2>Daftar Janji Temu</h2>
-    <a href="../views/tambah_janjitemu.php" class="btn btn-primary mb-2">Tambah Janji Temu</a>
+    <a href="tambah_janjitemu.php" class="btn btn-primary mb-2">Tambah Janji Temu</a>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -40,7 +42,7 @@ include '../includes/db.php'; ?>
                         <td>{$row['reason']}</td>
                         <td>
                             <a href='edit_janjitemu.php?id={$row['id']}' class='btn btn-warning'>Edit</a>
-                            <a href='../modules/hapus_janjitemu.php?id={$row['id']}' class='btn btn-danger'>Hapus</a>
+                            <a href='hapus_janjitemu.php?id={$row['id']}' class='btn btn-danger'>Hapus</a>
                         </td>
                     </tr>";
             }

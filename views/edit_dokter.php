@@ -1,7 +1,5 @@
 <?php
-
-
-include '../includes/db.php'; ?>
+include '../includes/db.php';
 
 $id = $_GET['id'];
 $sql = "SELECT * FROM doctors WHERE id=$id";
