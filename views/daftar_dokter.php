@@ -1,7 +1,8 @@
 <?php 
 
-include '../includes/db.php';
+include '../includes/db.php'; 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,8 +18,8 @@ include '../includes/db.php';
             <tr>
                 <th>ID</th>
                 <th>Nama</th>
-                <th>Spesialis</th>
-                <th>Telepon</th>
+                <th>Spesialisasi</th>
+                <th>No. Telepon</th>
                 <th>Aksi</th>
             </tr>
         </thead>
