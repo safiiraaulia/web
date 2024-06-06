@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "UPDATE inventory SET name='$name', type='$type', quantity=$quantity, location='$location', status='$status', expiration_date='$expiration_date' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header('Location: daftar_inventaris.php');
+        header('Location: ../views/daftar_inventaris.php');
         exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;

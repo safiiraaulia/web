@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = "INSERT INTO inventory (name, type, quantity, location, status, expiration_date) VALUES ('$name', '$type', $quantity, '$location', '$status', '$expiration_date')";
 
     if ($conn->query($sql) === TRUE) {
-        header('Location: daftar_inventaris.php');
+        header('Location: ../views/daftar_inventaris.php');
         exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;

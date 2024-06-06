@@ -9,7 +9,7 @@ include '../includes/db.php'; ?>
 <body>
 <div class="container">
     <h2>Tambah Inventaris</h2>
-    <form action="simpan_inventaris.php" method="post">
+    <form action="../modules/simpan_inventaris.php" method="post">
         <div class="form-group">
             <label for="name">Nama:</label>
             <input type="text" class="form-control" id="name" name="name" required>

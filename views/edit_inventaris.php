@@ -24,7 +24,7 @@ $conn->close();
 <body>
 <div class="container">
     <h2>Edit Inventaris</h2>
-    <form action="update_inventaris.php" method="post">
+    <form action="../modules/update_inventaris.php" method="post">
         <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
         <div class="form-group">
             <label for="name">Nama:</label>

@@ -43,7 +43,7 @@ include '../includes/db.php';
                         <td>{$row['expiration_date']}</td>
                         <td>
                             <a href='edit_inventaris.php?id={$row['id']}' class='btn btn-warning'>Edit</a>
-                            <a href='hapus_inventaris.php?id={$row['id']}' class='btn btn-danger'>Hapus</a>
+                            <a href='../modules/hapus_inventaris.php?id={$row['id']}' class='btn btn-danger'>Hapus</a>
                         </td>
                     </tr>";
             }
