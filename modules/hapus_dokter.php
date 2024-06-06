@@ -1,6 +1,5 @@
 <?php
 
-
 include '../includes/db.php';
 
 $id = $_GET['id'];
