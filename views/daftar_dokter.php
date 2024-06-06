@@ -36,7 +36,7 @@ include '../includes/db.php';
                         <td>{$row['phone']}</td>
                         <td>
                             <a href='edit_dokter.php?id={$row['id']}' class='btn btn-warning'>Edit</a>
-                            <a href='hapus_dokter.php?id={$row['id']}' class='btn btn-danger'>Hapus</a>
+                            <a href='../modules/hapus_dokter.php?id={$row['id']}' class='btn btn-danger'>Hapus</a>
                         </td>
                     </tr>";
             }

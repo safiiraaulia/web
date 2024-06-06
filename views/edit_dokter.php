@@ -1,11 +1,7 @@
 <?php
-<<<<<<< HEAD
 
 
 include '../includes/db.php'; 
-=======
-include '../includes/db.php';
->>>>>>> b1a39c01c90fd9d63204b398140eace1db0b722f
 
 $id = $_GET['id'];
 $sql = "SELECT * FROM doctors WHERE id=$id";
