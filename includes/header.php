@@ -113,7 +113,7 @@
             <a href="views/daftar_janjitemu.php" class="list-group-item list-group-item-action">
                 <i class="fas fa-calendar-check"></i> Janji Temu
             </a>
-            <a href="views/daftar_obat.php" class="list-group-item list-group-item-action">
+            <a href="views/daftar_inventaris.php" class="list-group-item list-group-item-action">
                 <i class="fas fa-pills"></i> Obat
             </a>
         </div>

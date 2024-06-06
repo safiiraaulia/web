@@ -48,7 +48,7 @@ include 'includes/header.php';
         </div>
         <div class="col-md-4">
             <div class="card text-center">
-                <a href="views/daftar_obat.php" class="stretched-link"></a>
+                <a href="views/daftar_inventaris.php" class="stretched-link"></a>
                 <div class="card-body">
                     <i class="fas fa-pills fa-3x"></i>
                     <h5 class="card-title mt-2">Obat</h5>

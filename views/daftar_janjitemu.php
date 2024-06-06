@@ -42,7 +42,7 @@ include '../includes/db.php';
                         <td>{$row['reason']}</td>
                         <td>
                             <a href='edit_janjitemu.php?id={$row['id']}' class='btn btn-warning'>Edit</a>
-                            <a href='hapus_janjitemu.php?id={$row['id']}' class='btn btn-danger'>Hapus</a>
+                            <a href='../modules/hapus_janjitemu.php?id={$row['id']}' class='btn btn-danger'>Hapus</a>
                         </td>
                     </tr>";
             }
