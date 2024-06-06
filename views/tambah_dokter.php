@@ -10,7 +10,7 @@ include '../includes/db.php'; ?>
 <body>
 <div class="container">
     <h2>Tambah Dokter Baru</h2>
-    <form action="simpan_dokter.php" method="post">
+    <form action="../modules/simpan_dokter.php" method="post">
         <div class="form-group">
             <label for="name">Nama:</label>
             <input type="text" class="form-control" id="name" name="name" required>

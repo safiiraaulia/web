@@ -1,7 +1,7 @@
 <?php
 
 
-include '../includes/db.php'; ?>
+include '../includes/db.php'; 
 
 $id = $_GET['id'];
 $sql = "SELECT * FROM doctors WHERE id=$id";
@@ -16,6 +16,7 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +26,7 @@ $conn->close();
 <body>
 <div class="container">
     <h2>Edit Dokter</h2>
-    <form action="update_dokter.php" method="post">
+    <form action="../modules/update_dokter.php" method="post">
         <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
         <div class="form-group">
             <label for="name">Nama:</label>

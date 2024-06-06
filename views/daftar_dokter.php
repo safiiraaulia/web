@@ -10,7 +10,7 @@ include '../includes/db.php'; ?>
 <body>
 <div class="container">
     <h2>Daftar Dokter</h2>
-    <a href="tambah_dokter.php" class="btn btn-primary mb-2">Tambah Dokter</a>
+    <a href="../views/tambah_dokter.php" class="btn btn-primary mb-2">Tambah Dokter</a>
     <table class="table table-bordered">
         <thead>
             <tr>

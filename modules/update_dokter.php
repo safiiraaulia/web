@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "UPDATE doctors SET name='$name', specialty='$specialty', phone='$phone' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header('Location: daftar_dokter.php');
+        header('Location: ../views/daftar_dokter.php');
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
