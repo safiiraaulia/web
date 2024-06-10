@@ -101,9 +101,6 @@
             <a href="index.php" class="list-group-item list-group-item-action active">
                 <i class="fas fa-tachometer-alt"></i> Dashboard
             </a>
-            <a href="views/daftar_pengguna.php" class="list-group-item list-group-item-action">
-                <i class="fas fa-users"></i> Pengguna
-            </a>
             <a href="views/daftar_pasien.php" class="list-group-item list-group-item-action">
                 <i class="fas fa-procedures"></i> Pasien
             </a>

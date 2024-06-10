@@ -147,7 +147,7 @@ include '../includes/db.php';
 </nav>
 <div class="container">
     <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered" style="margin-right: 20px;">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -193,9 +193,6 @@ include '../includes/db.php';
     <div class="list-group">
         <a href="../index.php" class="list-group-item list-group-item-action active">
             <i class="fas fa-tachometer-alt"></i> Dashboard
-        </a>
-        <a href="../views/daftar_pengguna.php" class="list-group-item list-group-item-action">
-            <i class="fas fa-users"></i> Pengguna
         </a>
         <a href="../views/daftar_pasien.php" class="list-group-item list-group-item-action">
             <i class="fas fa-procedures"></i> Pasien
