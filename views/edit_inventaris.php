@@ -185,7 +185,7 @@ $conn->close();
             <label for="expiration_date">Tanggal Kadaluarsa:</label>
             <input type="date" class="form-control" id="expiration_date" name="expiration_date" value="<?php echo $row['expiration_date']; ?>">
         </div>
-        <button type="submit" class="btn btn-primary mb-3" style="margin-left:500px;margin-right:400px;margin-top:30px;">Update</button>
+        <button type="submit" class="btn btn-primary mb-3" style="margin-left:500px;margin-right:400px;margin-top:30px;">Perbarui</button>
     </form>
 </div>
 <div id="sidebar" class="sidebar">

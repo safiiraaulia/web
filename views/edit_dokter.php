@@ -175,7 +175,7 @@ $conn->close();
             <label for="phone">No. Telepon:</label>
             <input type="text" class="form-control" id="phone" name="phone" value="<?php echo $row['phone']; ?>">
         </div>
-        <button type="submit" class="btn btn-primary mb-3" style="margin-left:500px;margin-right:400px;margin-top:30px;">Update</button>
+        <button type="submit" class="btn btn-primary mb-3" style="margin-left:500px;margin-right:400px;margin-top:30px;">Perbarui</button>
     </form>
 </div>
 <div id="sidebar" class="sidebar">
