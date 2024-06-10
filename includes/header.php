@@ -50,7 +50,6 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
-            height: 180px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -119,7 +118,7 @@
                 <i class="fas fa-calendar-check"></i> Janji Temu
             </a>
             <a href="views/daftar_inventaris.php" class="list-group-item list-group-item-action">
-                <i class="fas fa-pills"></i> Inventaris
+                <i class="fas fa-warehouse fa"></i> Inventaris
             </a>
         </div>
     </div>
