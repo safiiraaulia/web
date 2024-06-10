@@ -6,7 +6,6 @@ include 'includes/header.php';
 <div class="content">
     <br><h2>Selamat datang di Hospitality!</h2><br><br>
     <div class="row">
-
         <div class="col-md-4">
             <div class="card text-center">
                 <a href="views/daftar_pasien.php" class="stretched-link"></a>
