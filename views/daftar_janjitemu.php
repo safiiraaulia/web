@@ -24,7 +24,7 @@ include '../includes/db.php';
             margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-left: 665px;
+            margin-left: 655px;
             margin-top: 30px;
         }
 
@@ -36,6 +36,7 @@ include '../includes/db.php';
         .navbar-brand {
             color: #fff !important;
         }
+
         .sidebar {
             background-color: #92ac98;
             color: #fff;
