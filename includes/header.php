@@ -40,7 +40,7 @@
         }
 
         .content {
-            margin-left: 250px; /* Default state */
+            margin-left: 250px; 
             padding: 20px;
             transition: all 0.3s;
         }
@@ -119,7 +119,7 @@
                 <i class="fas fa-calendar-check"></i> Janji Temu
             </a>
             <a href="views/daftar_inventaris.php" class="list-group-item list-group-item-action">
-                <i class="fas fa-pills"></i> Obat
+                <i class="fas fa-pills"></i> Inventaris
             </a>
         </div>
     </div>
