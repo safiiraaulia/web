@@ -38,24 +38,32 @@
         .sidebar .list-group-item:hover {
             background-color: #637a68;
         }
+
         .content {
             margin-left: 250px; /* Default state */
             padding: 20px;
             transition: all 0.3s;
         }
         .card {
-            background-color: #e9f5ee;
+            background-color: #cae4d7;
             border: none;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        .card:hover{
+        .card:hover {
             background-color: #a5c2ab;
-
         }
         .card h5 {
             color: #486d51;
+        }
+        .card i {
+            margin-bottom: 10px;
         }
         .footer {
             background-color: #35523d;
