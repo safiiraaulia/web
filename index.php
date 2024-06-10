@@ -4,7 +4,7 @@ include 'includes/header.php';
 ?>
 
 <div class="content">
-    <br><h2>Selamat datang di Hospitality!</h2><br><br>
+    <br><h2>Selamat datang di Sistem Manajemen Hospitality!</h2><br><br>
     <div class="row">
         <div class="col-md-4">
             <div class="card text-center">
