@@ -191,7 +191,7 @@ include '../includes/db.php'; ?>
             <i class="fas fa-calendar-check"></i> Janji Temu
         </a>
         <a href="../views/daftar_inventaris.php" class="list-group-item list-group-item-action">
-            <i class="fas fa-pills"></i> Inventaris
+            <i class="fas fa-warehouse fa"></i> Inventaris
         </a>
     </div>
 </div>
