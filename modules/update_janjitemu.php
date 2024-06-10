@@ -10,7 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "UPDATE appointments SET patient_id='$patient_id', doctor_id='$doctor_id', appointment_date='$appointment_date', reason='$reason' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header('Location: ../views/daftar_janjitemu.php');
+        echo "<script>
+                alert('Data berhasil diperbarui');
+                window.location.href='../views/daftar_janjitemu.php';
+              </script>";
         exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;

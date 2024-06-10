@@ -12,11 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = "INSERT INTO inventory (name, type, quantity, location, status, expiration_date) VALUES ('$name', '$type', $quantity, '$location', '$status', '$expiration_date')";
 
     if ($conn->query($sql) === TRUE) {
-        header('Location: ../views/daftar_inventaris.php');
+        echo "<script>
+                alert('Data berhasil disimpan');
+                window.location.href='../views/daftar_inventaris.php';
+              </script>";
         exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    }    
 }
 
 $conn->close();

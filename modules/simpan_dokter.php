@@ -9,7 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "INSERT INTO doctors (name, specialty, phone) VALUES ('$name', '$specialty', '$phone')";
     if ($conn->query($sql) === TRUE) {
-        header('Location: ../views/daftar_dokter.php');
+        echo "<script>
+                alert('Data berhasil disimpan');
+                window.location.href='../views/daftar_dokter.php';
+              </script>";
+        exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

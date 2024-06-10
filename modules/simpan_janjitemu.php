@@ -7,13 +7,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $appointment_datetime = $_POST['appointment_datetime'];
     $reason = $_POST['reason'];
 
-    // Ubah format tanggal dan waktu sebelum dimasukkan ke dalam database
+    
     $formatted_datetime = date('Y-m-d H:i:s', strtotime($appointment_datetime));
 
     $sql = "INSERT INTO appointments (patient_id, doctor_id, appointment_date, reason) VALUES ($patient_id, $doctor_id, '$formatted_datetime', '$reason')";
 
     if ($conn->query($sql) === TRUE) {
-        header('Location: ../views/daftar_janjitemu.php');
+        echo "<script>
+                alert('Data berhasil disimpan');
+                window.location.href='../views/daftar_janjitemu.php';
+              </script>";
+        exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

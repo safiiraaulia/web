@@ -12,7 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "UPDATE patients SET name='$name', age=$age, gender='$gender', address='$address', phone='$phone' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header('Location: ../views/daftar_pasien.php');
+        echo "<script>
+                alert('Data berhasil diperbarui');
+                window.location.href='../views/daftar_pasien.php';
+              </script>";
+        exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

@@ -12,11 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "UPDATE inventory SET name='$name', type='$type', quantity=$quantity, location='$location', status='$status', expiration_date='$expiration_date' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header('Location: ../views/daftar_inventaris.php');
+        echo "<script>
+                alert('Data berhasil diperbarui');
+                window.location.href='../views/daftar_inventaris.php';
+              </script>";
         exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    }    
 }
 
 $conn->close();

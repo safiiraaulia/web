@@ -176,7 +176,7 @@ include '../includes/db.php';
                         <td>{$row['reason']}</td>
                         <td>
                             <a href='edit_janjitemu.php?id={$row['id']}' class='btn btn-warning'>Edit</a>
-                            <a href='../modules/hapus_janjitemu.php?id={$row['id']}' class='btn btn-danger'>Hapus</a>
+                            <a href='../modules/hapus_janjitemu.php?id={$row['id']}' class='btn btn-danger' onclick='return confirmDelete()'>Hapus</a>
                         </td>
                     </tr>";
             }
@@ -230,6 +230,11 @@ include '../includes/db.php';
             content.style.marginLeft = "250px";
         }
     }
+
+    function confirmDelete() {
+    var confirmation = confirm("Apakah Anda yakin ingin menghapus data?");
+    return confirmation;
+}
 </script>
 </body>
 </html>
