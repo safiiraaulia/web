@@ -177,7 +177,7 @@ include '../includes/db.php'; ?>
             <label for="appointment_datetime">Tanggal dan Jam Janji Temu:</label>
             <input type="datetime-local" class="form-control" id="appointment_datetime" name="appointment_datetime" required>
         </div>
-        <div class="form-group">
+        <div class="form-group" style="margin-right: 40px;">
             <label for="reason">Alasan:</label>
             <textarea class="form-control" id="reason" name="reason"></textarea>
         </div>
