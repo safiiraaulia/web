@@ -115,7 +115,7 @@ include '../includes/db.php';
             color: #fff;
             text-align: center;
             padding: 10px;
-            position: fixed;
+            position: relative;
             width: 100%;
             bottom: 0;
             left: 0;
