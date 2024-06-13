@@ -24,7 +24,7 @@ include '../includes/db.php';
             margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-left: 665px;
+            margin-left: 620px;
             margin-top: 30px;
         }
 
@@ -66,6 +66,7 @@ include '../includes/db.php';
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 1000px;
         }
         .table th, .table td {
             vertical-align: middle;
@@ -147,7 +148,7 @@ include '../includes/db.php';
 </nav>
 <div class="container">
     <div class="table-responsive">
-        <table class="table table-bordered" style="margin-right: 20px;">
+        <table class="table table-bordered" style="margin-right: 40px;">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -183,7 +184,7 @@ include '../includes/db.php';
             </tbody>
         </table>
     </div>
-    <a href="../views/tambah_dokter.php" class="btn btn-primary mb-3" style="margin-left:500px;margin-right:400px;margin-top:30px;" >Tambah Dokter</a>
+    <a href="../views/tambah_dokter.php" class="btn btn-primary mb-3" style="margin-left:400px;margin-right:400px;margin-top:30px;" >Tambah Dokter</a>
 </div>
 <div id="sidebar" class="sidebar">
     <div class="text-center mb-4">
@@ -204,7 +205,7 @@ include '../includes/db.php';
             <i class="fas fa-calendar-check"></i> Janji Temu
         </a>
         <a href="../views/daftar_inventaris.php" class="list-group-item list-group-item-action">
-            <i class="fas fa-warehouse fa"></i> Obat
+            <i class="fas fa-warehouse fa"></i> Inventaris
         </a>
     </div>
 </div>

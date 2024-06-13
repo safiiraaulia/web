@@ -57,9 +57,10 @@ include '../includes/db.php'; ?>
             background-color: #637a68;
         }
         .container {
-            margin-left: 250px;
+            margin-left: 400px;
             padding: 20px;
             transition: all 0.3s;
+            width:800px;
         }
         .table {
             background-color: #ffffff;
@@ -171,7 +172,7 @@ include '../includes/db.php'; ?>
             <label for="phone">No. Telepon:</label>
             <input type="text" class="form-control" id="phone" name="phone">
         </div>
-        <button type="submit" class="btn btn-primary mb-3" style="margin-left:500px;margin-right:400px;margin-top:30px;">Simpan</button>
+        <button type="submit" class="btn btn-primary mb-3" style="margin-left:350px;margin-right:400px;margin-top:30px;">Simpan</button>
     </form>
 </div>
 <div id="sidebar" class="sidebar">

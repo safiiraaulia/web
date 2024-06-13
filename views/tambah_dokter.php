@@ -56,9 +56,10 @@ include '../includes/db.php'; ?>
             background-color: #637a68;
         }
         .container {
-            margin-left: 250px;
+            margin-left: 400px;
             padding: 20px;
             transition: all 0.3s;
+            width: 800px;
         }
         .table {
             background-color: #ffffff;
@@ -145,20 +146,20 @@ include '../includes/db.php'; ?>
     <h2>Tambah Dokter</h2>
 </nav>
 <div class="container">
-    <form action="../modules/simpan_dokter.php" method="post">
-        <div class="form-group" style="margin-right: 40px;">
+    <form action="../modules/simpan_dokter.php" method="post" style="width: 800px">
+        <div class="form-group">
             <label for="name">Nama:</label>
             <input type="text" class="form-control" id="name" name="name" required>
         </div>
-        <div class="form-group" style="margin-right: 40px;">
+        <div class="form-group">
             <label for="specialty">Spesialisasi:</label>
             <input type="text" class="form-control" id="specialty" name="specialty" required>
         </div>
-        <div class="form-group" style="margin-right: 40px;">
+        <div class="form-group">
             <label for="phone">No. Telepon:</label>
             <input type="text" class="form-control" id="phone" name="phone">
         </div>
-        <button type="submit" class="btn btn-primary mb-3" style="margin-left:500px;margin-right:400px;margin-top:30px;">Simpan</button>
+        <button type="submit" class="btn btn-primary mb-3" style="margin-left:350px;margin-right:400px;margin-top:30px;">Simpan</button>
     </form>
 </div>
 <div id="sidebar" class="sidebar">
